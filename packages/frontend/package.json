@@ -10,6 +10,12 @@
   "author": "sublimer <sublimer.me@gmail.com> (https://sublimer.me/)",
   "license": "MIT",
   "dependencies": {
+    "@opentelemetry/api": "^1.7.0",
+    "@opentelemetry/context-zone": "^1.19.0",
+    "@opentelemetry/instrumentation-document-load": "^0.34.0",
+    "@opentelemetry/instrumentation-fetch": "^0.46.0",
+    "@opentelemetry/instrumentation-user-interaction": "^0.34.0",
+    "@opentelemetry/sdk-trace-web": "^1.19.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

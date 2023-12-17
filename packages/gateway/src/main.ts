@@ -8,18 +8,18 @@ const server = fastify({ logger: true });
   await server.register(cors);
 
   server.get('/', async () => {
-    const serviceAResponse = await fetch('http://localhost:3001/');
+    const serviceAResponse = await fetch('http://127.0.0.1:3001/');
     const serviceAResult = await serviceAResponse.json();
 
-    const serviceBResponse = await fetch('http://localhost:3002/');
+    const serviceBResponse = await fetch('http://127.0.0.1:3002/');
     const serviceBResult = await serviceBResponse.json();
-
-    const serviceCResponse = await fetch('http://localhost:3003/');
-    const serviceCResult = await serviceCResponse.json();
 
     return {
       service: 'gateway',
-      results: [serviceAResult, serviceBResult, serviceCResult],
+      results: [
+        serviceAResponse.ok ? serviceAResult : serviceAResponse.statusText,
+        serviceBResponse.ok ? serviceBResult : serviceBResponse.statusText,
+      ],
     };
   });
 
