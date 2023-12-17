@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "target": "ES2018",
+        "module": "NodeNext",
+        "jsx": "react",
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "NodeNext"
+    }
+}
